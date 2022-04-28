@@ -133,11 +133,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .test_content .test_form .test_list .test .answer input[type="text"] { width: 100%; margin-bottom: 30px; padding: 15px 25px; color: #2e2522; background-color: #ffd800; }
 .test_content .test_form .test_form_button { display: flex; justify-content: space-between; width: 50%; margin-right: auto; font-size: 18px; }
 @media screen and (min-width: 1025px) { .test_content .test_form .test_form_button { width: 30%; margin: 20px auto; } }
-.test_content .test_form .test_form_button .prev, .test_content .test_form .test_form_button .next { background: #ffffff; border: 2px solid #e4e4e4; user-select: none; }
-.test_content .test_form .test_form_button .prev:hover, .test_content .test_form .test_form_button .next:hover { border: 2px solid #ffd800; }
+.test_content .test_form .test_form_button .prev, .test_content .test_form .test_form_button .next { background: #fffade; border: 2px solid #107b5e; user-select: none; }
+.test_content .test_form .test_form_button .prev:hover, .test_content .test_form .test_form_button .next:hover { background: #ffffff; border: 2px solid #ffd800; }
 .test_content .test_form .test_form_button .prev.inactive, .test_content .test_form .test_form_button .next.inactive { color: #e4e4e4; background: #e4e4e4; border: 2px solid #e4e4e4; pointer-events: none; }
+.test_content .test_form .test_form_button .prev .material-symbols-outlined, .test_content .test_form .test_form_button .next .material-symbols-outlined { font-size: 20px; }
 .test_content .test_form button { display: block; width: 40%; margin-bottom: 0; padding: 15px 0; }
-.test_content .test_form button[type="submit"] { position: absolute; bottom: 0; right: 0; width: 25%; padding: 15px 0; font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+.test_content .test_form button[type="submit"] { position: absolute; bottom: 0; right: 0; width: 35%; padding: 15px 0; font-size: 18px; font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+@media screen and (min-width: 1025px) { .test_content .test_form button[type="submit"] { width: 25%; } }
 .test_content .test_form button[type="submit"]:hover { border: 2px solid #ff164b; color: #ff164b; background: #ffffff; }
 
 .completed_message { color: #107b5e; }
