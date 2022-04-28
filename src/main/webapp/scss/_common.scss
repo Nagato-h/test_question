@@ -38,6 +38,7 @@ body {
 	  	background: $gray;
 	  	transition: all .3s;
 	  	cursor: pointer;
+	  	user-select: none;
 		@include min_pc {
 			display: inline-block;
 			width: auto;

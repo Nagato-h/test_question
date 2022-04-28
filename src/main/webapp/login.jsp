@@ -20,7 +20,7 @@
 		<form action="./login" method="post" class="login">
 			<div class="form_input">
 				<input type="text" name="id" placeholder="ID">
-				<span class="material-symbols-outlined">face</span>
+				<span class="material-symbols-outlined">numbers</span>
 			</div>
 			<% if(errorMessage_id != null) { %>
 			<p class="error_message"><%= errorMessage_id %></p>
