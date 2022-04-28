@@ -1,0 +1,130 @@
+// EDIT
+.completed_message {
+	color: $green;
+}
+.mypage_edit_list,
+.mypage_delete_list {
+	width: 100%;
+	padding-top: 24px;
+	@include min_pc {
+		width: 60%;
+	}
+	.mypage_edit_heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 0;
+		text-align: left;
+		border-bottom: 2px solid $yellow;
+		.material-symbols-outlined {
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		.not_edit {
+			font-size: 12px;
+			color: $red;
+			.material-symbols-outlined {
+				margin-right: 0;
+			}
+		}
+		.edit_btn {
+			width: 25%;
+			@include min_pc {
+				width: auto;
+			}
+		}
+	}
+	.mypage_edit_content {
+		display: none;
+		padding: 50px 0;
+		background: $bg_yellow;
+		.mypage_edit {
+			width: 80%;
+			padding-top: 0;
+			.form_input {
+				margin: 15px 0;
+				text-align: left;
+				input[type='text'],
+				input[type='password'] {
+					padding-left: 12.5px;
+				}
+			}
+			.mypage_edit_button {
+				display: block;
+				width: 50%;
+				margin-top: 30px;
+				padding: 10px 0;
+				font-weight: bold;
+				border: 2px solid $red;
+				color: $white;
+				background: $red;
+				&:hover {
+					border: 2px solid $red;
+					color: $red;
+					background: $bg_yellow;
+				}
+			}
+		}
+	}
+}
+.mypage_return_button {
+	width: 50%;
+	padding: 15px 0;
+	font-size: 16px;
+	@include min_pc {
+		width: auto;
+		padding: 10px 35px;
+	}
+}
+// DELETE
+.mypage_delete {
+	@include min_pc {
+		width: 100%;
+	}
+	.confirm_message {
+		color: $red;
+	}
+	.mypage_delete_list {
+		padding-top: 0;
+	}
+	.mypage_delete_button {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-top: 24px;
+		@include min_pc {
+			flex-direction: row;
+			justify-content: center;
+		}
+		button {
+			width: 50%;
+			margin-bottom: 15px;
+			padding: 15px 0;
+			font-size: 16px;
+			&:first-child {
+				margin-bottom: 0;
+			}
+			@include min_pc {
+				width: auto;
+				margin-right: 20px;
+				margin-bottom: 0;
+				padding: 10px 35px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		button[type="submit"],
+		.add_register {
+			font-weight: bold;
+			border: 2px solid $red;
+			color: $white;
+			background: $red;
+			&:hover {
+				border: 2px solid $red;
+				color: $red;
+				background: $white;
+			}
+		}
+	}
+}

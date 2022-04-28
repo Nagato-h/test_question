@@ -1,0 +1,36 @@
+.login_message {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 300;
+}
+.top_menu,
+.mypage_menu {
+	margin: 30px 0;
+	padding: 0;
+	list-style: none;
+	li {
+		width: 100%;
+		margin-bottom: 15px;
+		@include min_pc {
+			width: 80%;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		button {
+			width: 100%;
+			padding: 50px 0;
+			position: relative;
+			overflow: hidden;
+			font-size: 18px;
+			.material-symbols-outlined {
+				position: absolute;
+				left: -2%;
+				bottom: -30%;
+				font-size: 175px;
+				opacity: .3;
+				transform: rotate(-20deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+// color
+$white: #ffffff;
+$brown: #2e2522;
+$gray: #e4e4e4;
+$red: #ff164b;
+$green: #107b5e;
+$yellow: #ffd800;
+$bg_yellow: #fffade;
+
+// メディアクエリ
+@mixin min_pc {
+	@media screen and (min-width: 1025px) {
+		@content;
+	}
+}
+
+// 共通
+body {
+	margin: 0;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	color: $brown;
+	background: $white;
+	input,textarea {
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+ 	button,[type=button],a {
+ 		display: block;
+		width: 40%;
+		margin-bottom: 15px;
+		padding: 10px 0;
+		font-size: 14px;
+	  	font-family: 'M PLUS Rounded 1c', sans-serif;
+	  	font-weight: 300;
+	  	border: 2px solid $gray;
+	  	border-radius: 5px;
+	  	text-decoration: none;
+	  	color: $brown;
+	  	background: $gray;
+	  	transition: all .3s;
+	  	cursor: pointer;
+		@include min_pc {
+			display: inline-block;
+			width: auto;
+			margin-bottom: 0;
+			padding: 7.5px 15px;
+		}
+	  	&:hover {
+	 		background: $white;
+	 		border: 2px solid $yellow;
+	 		color: $yellow;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	// header
+	.header {
+		padding: 10px 0;
+		background: $yellow;
+		.header_logo {
+			user-select: none;
+			display: inline-block;
+			color: $white;
+			h1{
+				margin: 0;
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-size: 80px;
+			}
+			p {
+				margin: 0;
+				margin-top: -10px;
+				font-family: 'Smooch Sans', sans-serif;
+				font-size: 24px;
+				border-bottom: 1px solid $white;
+			}
+		}
+		.header_heading {
+			margin: 15px 0 10px;
+		}
+	}
+	
+	// content
+	.content {
+		width: 90%;
+		margin: 24px 0 48px;
+		@include min_pc {
+			width: 60%;
+		}
+		.material-symbols-outlined {
+			vertical-align: middle;
+		}
+		.error_message {
+			margin-top: -5px;
+			padding-bottom: 5px;
+			font-size: 12px;
+			text-align: left;
+			color: $red;
+			&.session {
+				padding-top: 20px;
+				font-size: 14px;
+				text-align: center;
+			}
+		}
+	}
+}

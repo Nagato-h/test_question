@@ -1,0 +1,324 @@
+// COMMON
+form {
+	width: 100%;
+	padding-top: 24px;
+	@include min_pc {
+		width: 50%;
+	}
+}
+// LOGIN
+form {
+	.form_input {
+	  	position: relative;
+	  	margin: 10px 0;
+		// アイコン
+		.material-symbols-outlined {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			margin-left: 5px;
+			transition: 0.3s;
+		}
+		input[type='text'],
+		input[type='password'] {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px;
+			padding-left: 40px;
+			font-size: 16px;
+			letter-spacing: 1px;
+			color: $brown;
+			border: none;
+			border-bottom: 2px solid $brown;
+			background: transparent;
+			transition: 0.3s;
+			@include min_pc {
+				padding: 12.5px;
+				padding-left: 40px;
+			}
+			&:focus {
+				border-bottom: 2px solid $yellow;
+				outline: none;
+				& + .material-symbols-outlined {
+					color: $yellow;
+				}
+			}
+		}
+	}
+	button {
+		&.login {
+			width: 100%;
+			margin-top: 15px;
+			padding: 15px 0;
+	  		font-size: 16px;
+			font-weight: bold;
+			@include min_pc {
+				padding: 10px 0;
+			}
+		}
+	}
+}
+
+// REGISTER,EDIT,DELETE
+.quiz_form,
+.user_register {
+	width: 100%;
+	padding-top: 24px;
+	@include min_pc {
+		width: 80%;
+	}
+	.error_message {
+		margin-left: 15%;
+		margin-bottom: -25px;
+		@include min_pc {
+			margin-left: 10%;
+			margin-bottom: 0;
+		}
+	}
+	.confirm_message,
+	.complete_message {
+		margin-bottom: 24px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.question,
+	.answers {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+		box-sizing: border-box;
+		text-align: left;
+		@include min_pc {
+			flex-wrap: nowrap;
+			margin-bottom: 30px;
+		}
+		label {
+			width: 100%;
+			margin-bottom:10px;
+			font-size: 16px;
+			@include min_pc {
+				width: 10%;
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+	.question,
+	.answers .answer_list > li .answer {
+		position: relative;
+		box-sizing: border-box;
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			transform: rotate(225deg);
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			transform: rotate(225deg);
+			border-left: 20px solid $white;
+			border-top: 20px solid $white;
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+		}
+		textarea,
+		input[type="text"],
+		p {
+			position: relative;
+			z-index: 100;
+			box-sizing: inherit;
+			font-size: 14px;
+			border: none;
+			border-radius: 20px;
+		}
+		textarea::placeholder {
+			color: $white;
+		}
+		input[type="text"]::placeholder {
+			color: $brown;
+		}
+	}
+	.question {
+		&::before {
+			left: 25px;
+			bottom: -15px;
+			border-left: 20px solid $green;
+			border-top: 20px solid $green;
+			@include min_pc {
+				left: 95px;
+			}
+		}
+		&::after {
+			left: 5px;
+			bottom: -20px;
+			@include min_pc {
+				left: 75px;
+			}
+		}
+		textarea,
+		p {
+			min-width: 100%;
+			max-width: 100%;
+			margin: 0;
+			padding: 25px;
+			font-size: 14px;
+			line-height: 1.5;
+			color: $white;
+			background-color: $green;
+			@include min_pc {
+				min-width: 90%;
+				max-width: 90%;
+			}
+		}
+	}
+	.answers {
+		.answer_list {
+			width: 100%;
+			@include min_pc {
+				width: 90%;
+			}
+			> li {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				.answer {
+					width: 82.5%;
+					@include min_pc {
+						width: 85%;
+					}
+					&::before {
+						right: 20px;
+						bottom: 15px;
+						border-left: 20px solid $yellow;
+						border-top: 20px solid $yellow;
+					}
+					&::after {
+						right: 0;
+						bottom: 10px;
+					}
+					input[type="text"],
+					p {
+						width: 100%;
+						margin-bottom: 30px;
+						padding: 15px 25px;
+						color: $brown;
+						background-color: $yellow;
+					}
+				}
+				button {
+					margin-top: 3px;
+					width: 15%;
+					@include min_pc {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	&.confirm,
+	&.complete,
+	&.delete {
+		.answer_list {
+			& > li {
+				.answer {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&.delete {
+		.confirm_message {
+			color: $red;
+		}
+	}
+	.quiz_form_button,
+	.user_register_button {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		@include min_pc {
+			flex-direction: row;
+			justify-content: center;
+		}
+		button {
+			width: 50%;
+			margin-bottom: 15px;
+			padding: 15px 0;
+			font-size: 16px;
+			&:first-child {
+				margin-bottom: 0;
+			}
+			@include min_pc {
+				width: auto;
+				margin-right: 20px;
+				margin-bottom: 0;
+				padding: 10px 35px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		button[type="submit"],
+		.add_register {
+			font-weight: bold;
+			border: 2px solid $red;
+			color: $white;
+			background: $red;
+			&:hover {
+				border: 2px solid $red;
+				color: $red;
+				background: $white;
+			}
+		}
+	}
+}
+
+.user_register {
+	@include min_pc {
+		width: 50%;
+	}
+	.error_message {
+		margin: 0;
+	}
+	&.confirm {
+		.confirm_message {
+			margin-bottom: 48px;
+		}
+		.form_input {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			margin: 20px 0;
+			text-align: left;
+			.material-symbols-outlined {
+				margin: 0 10px 0 0;
+				position: static;
+				transform: translate(0, 0);
+			}
+		}
+	}
+	&.complete {
+		.complete_message {
+			line-height: 1.5;
+			span {
+				padding: 10px;
+				color: $red;
+			}
+		}
+	}
+	.user_register_button {
+		padding-top: 30px;
+	}
+}

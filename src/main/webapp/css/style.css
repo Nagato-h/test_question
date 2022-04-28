@@ -1,0 +1,175 @@
+body { margin: 0; font-family: 'M PLUS Rounded 1c', sans-serif; color: #2e2522; background: #ffffff; }
+body input, body textarea { font-family: 'M PLUS Rounded 1c', sans-serif; }
+body button, body [type=button], body a { display: block; width: 40%; margin-bottom: 15px; padding: 10px 0; font-size: 14px; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 300; border: 2px solid #e4e4e4; border-radius: 5px; text-decoration: none; color: #2e2522; background: #e4e4e4; transition: all .3s; cursor: pointer; }
+@media screen and (min-width: 1025px) { body button, body [type=button], body a { display: inline-block; width: auto; margin-bottom: 0; padding: 7.5px 15px; } }
+body button:hover, body [type=button]:hover, body a:hover { background: #ffffff; border: 2px solid #ffd800; color: #ffd800; }
+body button:last-child, body [type=button]:last-child, body a:last-child { margin-bottom: 0; }
+body .header { padding: 10px 0; background: #ffd800; }
+body .header .header_logo { user-select: none; display: inline-block; color: #ffffff; }
+body .header .header_logo h1 { margin: 0; font-family: 'Montserrat Alternates', sans-serif; font-size: 80px; }
+body .header .header_logo p { margin: 0; margin-top: -10px; font-family: 'Smooch Sans', sans-serif; font-size: 24px; border-bottom: 1px solid #ffffff; }
+body .header .header_heading { margin: 15px 0 10px; }
+body .content { width: 90%; margin: 24px 0 48px; }
+@media screen and (min-width: 1025px) { body .content { width: 60%; } }
+body .content .material-symbols-outlined { vertical-align: middle; }
+body .content .error_message { margin-top: -5px; padding-bottom: 5px; font-size: 12px; text-align: left; color: #ff164b; }
+body .content .error_message.session { padding-top: 20px; font-size: 14px; text-align: center; }
+
+form { width: 100%; padding-top: 24px; }
+@media screen and (min-width: 1025px) { form { width: 50%; } }
+
+form .form_input { position: relative; margin: 10px 0; }
+form .form_input .material-symbols-outlined { position: absolute; top: 50%; left: 0; transform: translate(0, -50%); margin-left: 5px; transition: 0.3s; }
+form .form_input input[type='text'], form .form_input input[type='password'] { box-sizing: border-box; width: 100%; padding: 10px; padding-left: 40px; font-size: 16px; letter-spacing: 1px; color: #2e2522; border: none; border-bottom: 2px solid #2e2522; background: transparent; transition: 0.3s; }
+@media screen and (min-width: 1025px) { form .form_input input[type='text'], form .form_input input[type='password'] { padding: 12.5px; padding-left: 40px; } }
+form .form_input input[type='text']:focus, form .form_input input[type='password']:focus { border-bottom: 2px solid #ffd800; outline: none; }
+form .form_input input[type='text']:focus + .material-symbols-outlined, form .form_input input[type='password']:focus + .material-symbols-outlined { color: #ffd800; }
+form button.login { width: 100%; margin-top: 15px; padding: 15px 0; font-size: 16px; font-weight: bold; }
+@media screen and (min-width: 1025px) { form button.login { padding: 10px 0; } }
+
+.quiz_form, .user_register { width: 100%; padding-top: 24px; }
+@media screen and (min-width: 1025px) { .quiz_form, .user_register { width: 80%; } }
+.quiz_form .error_message, .user_register .error_message { margin-left: 15%; margin-bottom: -25px; }
+@media screen and (min-width: 1025px) { .quiz_form .error_message, .user_register .error_message { margin-left: 10%; margin-bottom: 0; } }
+.quiz_form .confirm_message, .quiz_form .complete_message, .user_register .confirm_message, .user_register .complete_message { margin-bottom: 24px; font-size: 16px; font-weight: bold; }
+.quiz_form .question, .quiz_form .answers, .user_register .question, .user_register .answers { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 40px; box-sizing: border-box; text-align: left; }
+@media screen and (min-width: 1025px) { .quiz_form .question, .quiz_form .answers, .user_register .question, .user_register .answers { flex-wrap: nowrap; margin-bottom: 30px; } }
+.quiz_form .question label, .quiz_form .answers label, .user_register .question label, .user_register .answers label { width: 100%; margin-bottom: 10px; font-size: 16px; }
+@media screen and (min-width: 1025px) { .quiz_form .question label, .quiz_form .answers label, .user_register .question label, .user_register .answers label { width: 10%; margin: 10px 0 0 0; } }
+.quiz_form .question, .quiz_form .answers .answer_list > li .answer, .user_register .question, .user_register .answers .answer_list > li .answer { position: relative; box-sizing: border-box; }
+.quiz_form .question::before, .quiz_form .answers .answer_list > li .answer::before, .user_register .question::before, .user_register .answers .answer_list > li .answer::before { content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.quiz_form .question::after, .quiz_form .answers .answer_list > li .answer::after, .user_register .question::after, .user_register .answers .answer_list > li .answer::after { content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); border-left: 20px solid #ffffff; border-top: 20px solid #ffffff; border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.quiz_form .question textarea, .quiz_form .question input[type="text"], .quiz_form .question p, .quiz_form .answers .answer_list > li .answer textarea, .quiz_form .answers .answer_list > li .answer input[type="text"], .quiz_form .answers .answer_list > li .answer p, .user_register .question textarea, .user_register .question input[type="text"], .user_register .question p, .user_register .answers .answer_list > li .answer textarea, .user_register .answers .answer_list > li .answer input[type="text"], .user_register .answers .answer_list > li .answer p { position: relative; z-index: 100; box-sizing: inherit; font-size: 14px; border: none; border-radius: 20px; }
+.quiz_form .question textarea::placeholder, .quiz_form .answers .answer_list > li .answer textarea::placeholder, .user_register .question textarea::placeholder, .user_register .answers .answer_list > li .answer textarea::placeholder { color: #ffffff; }
+.quiz_form .question input[type="text"]::placeholder, .quiz_form .answers .answer_list > li .answer input[type="text"]::placeholder, .user_register .question input[type="text"]::placeholder, .user_register .answers .answer_list > li .answer input[type="text"]::placeholder { color: #2e2522; }
+.quiz_form .question::before, .user_register .question::before { left: 25px; bottom: -15px; border-left: 20px solid #107b5e; border-top: 20px solid #107b5e; }
+@media screen and (min-width: 1025px) { .quiz_form .question::before, .user_register .question::before { left: 95px; } }
+.quiz_form .question::after, .user_register .question::after { left: 5px; bottom: -20px; }
+@media screen and (min-width: 1025px) { .quiz_form .question::after, .user_register .question::after { left: 75px; } }
+.quiz_form .question textarea, .quiz_form .question p, .user_register .question textarea, .user_register .question p { min-width: 100%; max-width: 100%; margin: 0; padding: 25px; font-size: 14px; line-height: 1.5; color: #ffffff; background-color: #107b5e; }
+@media screen and (min-width: 1025px) { .quiz_form .question textarea, .quiz_form .question p, .user_register .question textarea, .user_register .question p { min-width: 90%; max-width: 90%; } }
+.quiz_form .answers .answer_list, .user_register .answers .answer_list { width: 100%; }
+@media screen and (min-width: 1025px) { .quiz_form .answers .answer_list, .user_register .answers .answer_list { width: 90%; } }
+.quiz_form .answers .answer_list > li, .user_register .answers .answer_list > li { display: flex; justify-content: space-between; align-items: flex-start; }
+.quiz_form .answers .answer_list > li .answer, .user_register .answers .answer_list > li .answer { width: 82.5%; }
+@media screen and (min-width: 1025px) { .quiz_form .answers .answer_list > li .answer, .user_register .answers .answer_list > li .answer { width: 85%; } }
+.quiz_form .answers .answer_list > li .answer::before, .user_register .answers .answer_list > li .answer::before { right: 20px; bottom: 15px; border-left: 20px solid #ffd800; border-top: 20px solid #ffd800; }
+.quiz_form .answers .answer_list > li .answer::after, .user_register .answers .answer_list > li .answer::after { right: 0; bottom: 10px; }
+.quiz_form .answers .answer_list > li .answer input[type="text"], .quiz_form .answers .answer_list > li .answer p, .user_register .answers .answer_list > li .answer input[type="text"], .user_register .answers .answer_list > li .answer p { width: 100%; margin-bottom: 30px; padding: 15px 25px; color: #2e2522; background-color: #ffd800; }
+.quiz_form .answers .answer_list > li button, .user_register .answers .answer_list > li button { margin-top: 3px; width: 15%; }
+@media screen and (min-width: 1025px) { .quiz_form .answers .answer_list > li button, .user_register .answers .answer_list > li button { width: auto; } }
+.quiz_form.confirm .answer_list > li .answer, .quiz_form.complete .answer_list > li .answer, .quiz_form.delete .answer_list > li .answer, .user_register.confirm .answer_list > li .answer, .user_register.complete .answer_list > li .answer, .user_register.delete .answer_list > li .answer { width: 100%; }
+.quiz_form.delete .confirm_message, .user_register.delete .confirm_message { color: #ff164b; }
+.quiz_form .quiz_form_button, .quiz_form .user_register_button, .user_register .quiz_form_button, .user_register .user_register_button { display: flex; flex-direction: column-reverse; align-items: center; }
+@media screen and (min-width: 1025px) { .quiz_form .quiz_form_button, .quiz_form .user_register_button, .user_register .quiz_form_button, .user_register .user_register_button { flex-direction: row; justify-content: center; } }
+.quiz_form .quiz_form_button button, .quiz_form .user_register_button button, .user_register .quiz_form_button button, .user_register .user_register_button button { width: 50%; margin-bottom: 15px; padding: 15px 0; font-size: 16px; }
+.quiz_form .quiz_form_button button:first-child, .quiz_form .user_register_button button:first-child, .user_register .quiz_form_button button:first-child, .user_register .user_register_button button:first-child { margin-bottom: 0; }
+@media screen and (min-width: 1025px) { .quiz_form .quiz_form_button button, .quiz_form .user_register_button button, .user_register .quiz_form_button button, .user_register .user_register_button button { width: auto; margin-right: 20px; margin-bottom: 0; padding: 10px 35px; }
+  .quiz_form .quiz_form_button button:last-child, .quiz_form .user_register_button button:last-child, .user_register .quiz_form_button button:last-child, .user_register .user_register_button button:last-child { margin-right: 0; } }
+.quiz_form .quiz_form_button button[type="submit"], .quiz_form .quiz_form_button .add_register, .quiz_form .user_register_button button[type="submit"], .quiz_form .user_register_button .add_register, .user_register .quiz_form_button button[type="submit"], .user_register .quiz_form_button .add_register, .user_register .user_register_button button[type="submit"], .user_register .user_register_button .add_register { font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+.quiz_form .quiz_form_button button[type="submit"]:hover, .quiz_form .quiz_form_button .add_register:hover, .quiz_form .user_register_button button[type="submit"]:hover, .quiz_form .user_register_button .add_register:hover, .user_register .quiz_form_button button[type="submit"]:hover, .user_register .quiz_form_button .add_register:hover, .user_register .user_register_button button[type="submit"]:hover, .user_register .user_register_button .add_register:hover { border: 2px solid #ff164b; color: #ff164b; background: #ffffff; }
+
+@media screen and (min-width: 1025px) { .user_register { width: 50%; } }
+.user_register .error_message { margin: 0; }
+.user_register.confirm .confirm_message { margin-bottom: 48px; }
+.user_register.confirm .form_input { display: flex; justify-content: center; align-items: center; width: 50%; margin: 20px 0; text-align: left; }
+.user_register.confirm .form_input .material-symbols-outlined { margin: 0 10px 0 0; position: static; transform: translate(0, 0); }
+.user_register.complete .complete_message { line-height: 1.5; }
+.user_register.complete .complete_message span { padding: 10px; color: #ff164b; }
+.user_register .user_register_button { padding-top: 30px; }
+
+.login_message { margin: 0; font-size: 16px; font-weight: 300; }
+
+.top_menu, .mypage_menu { margin: 30px 0; padding: 0; list-style: none; }
+.top_menu li, .mypage_menu li { width: 100%; margin-bottom: 15px; }
+@media screen and (min-width: 1025px) { .top_menu li, .mypage_menu li { width: 80%; } }
+.top_menu li:last-child, .mypage_menu li:last-child { margin-bottom: 0; }
+.top_menu li button, .mypage_menu li button { width: 100%; padding: 50px 0; position: relative; overflow: hidden; font-size: 18px; }
+.top_menu li button .material-symbols-outlined, .mypage_menu li button .material-symbols-outlined { position: absolute; left: -2%; bottom: -30%; font-size: 175px; opacity: .3; transform: rotate(-20deg); }
+
+.register_button { width: 60%; margin-bottom: 24px; padding: 20px; font-size: 16px; font-weight: bold; border: 2px solid #ff164b; border-radius: 10px; color: #ffffff; background: #ff164b; }
+@media screen and (min-width: 1025px) { .register_button { width: 40%; padding: 15px; border-radius: 15px; } }
+.register_button:hover { background: #ffffff; border: 2px solid #ff164b; color: #ff164b; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+.quiz_list { margin: 0; padding: 0; }
+.quiz_list > li { position: relative; margin-bottom: 25px; padding: 25px; border: 3px solid #107b5e; border-radius: 25px; background: #fffade; }
+.quiz_list > li .quiz { text-align: left; }
+.quiz_list > li .quiz .question span, .quiz_list > li .quiz .answers_list span { display: block; position: absolute; top: -15px; padding: 5px 20px; border-radius: 25px; font-size: 14px; font-weight: bold; }
+.quiz_list > li .quiz .question, .quiz_list > li .quiz .answers_list li { position: relative; border-radius: 20px; }
+.quiz_list > li .quiz .question::before, .quiz_list > li .quiz .answers_list li::before { content: ''; position: absolute; bottom: -15px; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.quiz_list > li .quiz .question::after, .quiz_list > li .quiz .answers_list li::after { content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); bottom: -20px; border-left: 20px solid #fffade; border-top: 20px solid #fffade; border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.quiz_list > li .quiz .question { margin-bottom: 35px; padding: 25px; color: #ffffff; background-color: #107b5e; }
+.quiz_list > li .quiz .question::before { left: 20px; border-left: 20px solid #107b5e; border-top: 20px solid #107b5e; }
+.quiz_list > li .quiz .question::after { left: 0; }
+.quiz_list > li .quiz .question span { left: 15px; color: #2e2522; background: #e4e4e4; }
+.quiz_list > li .quiz .answers_list { display: flex; justify-content: end; flex-wrap: wrap; margin: 0 0 0 auto; }
+.quiz_list > li .quiz .answers_list li { width: 100%; margin-bottom: 40px; padding: 15px; color: #2e2522; background-color: #ffd800; }
+@media screen and (min-width: 1025px) { .quiz_list > li .quiz .answers_list li { width: 45%; margin-left: 10px; margin-bottom: 35px; } }
+.quiz_list > li .quiz .answers_list li::before { right: 20px; border-left: 20px solid #ffd800; border-top: 20px solid #ffd800; }
+.quiz_list > li .quiz .answers_list li::after { right: 0; }
+.quiz_list > li .quiz .answers_list span { right: 10px; color: #ffffff; background: #ff164b; }
+@media screen and (min-width: 1025px) { .quiz_list > li .edit { display: flex; justify-content: end; } }
+.quiz_list > li .edit a { width: 70%; padding: 10px 0; }
+@media screen and (min-width: 1025px) { .quiz_list > li .edit a { width: auto; margin-right: 15px; padding: 7.5px 30px; } }
+.quiz_list > li .edit a:last-child { margin-right: 0; }
+
+.test_content { padding: 0; margin: 0; }
+.test_content .test_form { width: 100%; margin: 50px 0; position: relative; }
+.test_content .test_form .test_list { padding: 0; text-align: center; }
+.test_content .test_form .test_list .test { display: none; position: relative; margin-bottom: 25px; padding: 50px 25px 25px; border: 3px solid #107b5e; border-radius: 25px; background: #fffade; }
+.test_content .test_form .test_list .test.active { display: block; }
+.test_content .test_form .test_list .test h3 { width: 30%; padding: 15px 0; position: absolute; top: -10%; left: 50%; transform: translate(-50%, 0); border-radius: 30px; color: #2e2522; background: #e4e4e4; }
+.test_content .test_form .test_list .test .question, .test_content .test_form .test_list .test .answer { position: relative; text-align: left; border-radius: 20px; }
+.test_content .test_form .test_list .test .question::before, .test_content .test_form .test_list .test .answer::before { content: ''; position: absolute; bottom: -15px; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.test_content .test_form .test_list .test .question::after, .test_content .test_form .test_list .test .answer::after { content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(225deg); bottom: -20px; border-left: 20px solid #fffade; border-top: 20px solid #fffade; border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
+.test_content .test_form .test_list .test .question input[type="text"], .test_content .test_form .test_list .test .answer input[type="text"] { position: relative; z-index: 100; box-sizing: inherit; font-size: 14px; border: none; border-radius: 20px; }
+.test_content .test_form .test_list .test .question { margin-bottom: 35px; padding: 50px 25px; color: #ffffff; background-color: #107b5e; }
+.test_content .test_form .test_list .test .question::before { left: 20px; border-left: 20px solid #107b5e; border-top: 20px solid #107b5e; }
+.test_content .test_form .test_list .test .question::after { left: 0; }
+.test_content .test_form .test_list .test .answer::before { right: 20px; bottom: 15px; border-left: 20px solid #ffd800; border-top: 20px solid #ffd800; }
+.test_content .test_form .test_list .test .answer::after { right: 0; bottom: 10px; }
+.test_content .test_form .test_list .test .answer input[type="text"] { width: 100%; margin-bottom: 30px; padding: 15px 25px; color: #2e2522; background-color: #ffd800; }
+.test_content .test_form .test_form_button { display: flex; justify-content: space-between; width: 50%; margin-right: auto; font-size: 18px; }
+@media screen and (min-width: 1025px) { .test_content .test_form .test_form_button { width: 30%; margin: 20px auto; } }
+.test_content .test_form .test_form_button .prev, .test_content .test_form .test_form_button .next { background: #ffffff; border: 2px solid #e4e4e4; user-select: none; }
+.test_content .test_form .test_form_button .prev:hover, .test_content .test_form .test_form_button .next:hover { border: 2px solid #ffd800; }
+.test_content .test_form .test_form_button .prev.inactive, .test_content .test_form .test_form_button .next.inactive { color: #e4e4e4; background: #e4e4e4; border: 2px solid #e4e4e4; pointer-events: none; }
+.test_content .test_form button { display: block; width: 40%; margin-bottom: 0; padding: 15px 0; }
+.test_content .test_form button[type="submit"] { position: absolute; bottom: 0; right: 0; width: 25%; padding: 15px 0; font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+.test_content .test_form button[type="submit"]:hover { border: 2px solid #ff164b; color: #ff164b; background: #ffffff; }
+
+.completed_message { color: #107b5e; }
+
+.mypage_edit_list, .mypage_delete_list { width: 100%; padding-top: 24px; }
+@media screen and (min-width: 1025px) { .mypage_edit_list, .mypage_delete_list { width: 60%; } }
+.mypage_edit_list .mypage_edit_heading, .mypage_delete_list .mypage_edit_heading { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; text-align: left; border-bottom: 2px solid #ffd800; }
+.mypage_edit_list .mypage_edit_heading .material-symbols-outlined, .mypage_delete_list .mypage_edit_heading .material-symbols-outlined { margin-right: 10px; vertical-align: middle; }
+.mypage_edit_list .mypage_edit_heading .not_edit, .mypage_delete_list .mypage_edit_heading .not_edit { font-size: 12px; color: #ff164b; }
+.mypage_edit_list .mypage_edit_heading .not_edit .material-symbols-outlined, .mypage_delete_list .mypage_edit_heading .not_edit .material-symbols-outlined { margin-right: 0; }
+.mypage_edit_list .mypage_edit_heading .edit_btn, .mypage_delete_list .mypage_edit_heading .edit_btn { width: 25%; }
+@media screen and (min-width: 1025px) { .mypage_edit_list .mypage_edit_heading .edit_btn, .mypage_delete_list .mypage_edit_heading .edit_btn { width: auto; } }
+.mypage_edit_list .mypage_edit_content, .mypage_delete_list .mypage_edit_content { display: none; padding: 50px 0; background: #fffade; }
+.mypage_edit_list .mypage_edit_content .mypage_edit, .mypage_delete_list .mypage_edit_content .mypage_edit { width: 80%; padding-top: 0; }
+.mypage_edit_list .mypage_edit_content .mypage_edit .form_input, .mypage_delete_list .mypage_edit_content .mypage_edit .form_input { margin: 15px 0; text-align: left; }
+.mypage_edit_list .mypage_edit_content .mypage_edit .form_input input[type='text'], .mypage_edit_list .mypage_edit_content .mypage_edit .form_input input[type='password'], .mypage_delete_list .mypage_edit_content .mypage_edit .form_input input[type='text'], .mypage_delete_list .mypage_edit_content .mypage_edit .form_input input[type='password'] { padding-left: 12.5px; }
+.mypage_edit_list .mypage_edit_content .mypage_edit .mypage_edit_button, .mypage_delete_list .mypage_edit_content .mypage_edit .mypage_edit_button { display: block; width: 50%; margin-top: 30px; padding: 10px 0; font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+.mypage_edit_list .mypage_edit_content .mypage_edit .mypage_edit_button:hover, .mypage_delete_list .mypage_edit_content .mypage_edit .mypage_edit_button:hover { border: 2px solid #ff164b; color: #ff164b; background: #fffade; }
+
+.mypage_return_button { width: 50%; padding: 15px 0; font-size: 16px; }
+@media screen and (min-width: 1025px) { .mypage_return_button { width: auto; padding: 10px 35px; } }
+
+@media screen and (min-width: 1025px) { .mypage_delete { width: 100%; } }
+.mypage_delete .confirm_message { color: #ff164b; }
+.mypage_delete .mypage_delete_list { padding-top: 0; }
+.mypage_delete .mypage_delete_button { display: flex; flex-direction: column-reverse; align-items: center; padding-top: 24px; }
+@media screen and (min-width: 1025px) { .mypage_delete .mypage_delete_button { flex-direction: row; justify-content: center; } }
+.mypage_delete .mypage_delete_button button { width: 50%; margin-bottom: 15px; padding: 15px 0; font-size: 16px; }
+.mypage_delete .mypage_delete_button button:first-child { margin-bottom: 0; }
+@media screen and (min-width: 1025px) { .mypage_delete .mypage_delete_button button { width: auto; margin-right: 20px; margin-bottom: 0; padding: 10px 35px; }
+  .mypage_delete .mypage_delete_button button:last-child { margin-right: 0; } }
+.mypage_delete .mypage_delete_button button[type="submit"], .mypage_delete .mypage_delete_button .add_register { font-weight: bold; border: 2px solid #ff164b; color: #ffffff; background: #ff164b; }
+.mypage_delete .mypage_delete_button button[type="submit"]:hover, .mypage_delete .mypage_delete_button .add_register:hover { border: 2px solid #ff164b; color: #ff164b; background: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */

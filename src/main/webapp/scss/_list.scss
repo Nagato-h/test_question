@@ -1,0 +1,152 @@
+.register_button {
+	width: 60%;
+	margin-bottom: 24px;
+	padding: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 2px solid $red;
+	border-radius: 10px;
+	color: $white;
+	background: $red;
+	@include min_pc {
+		width: 40%;
+		padding: 15px;
+		border-radius: 15px;
+	}
+	&:hover {
+		background: $white;
+		border: 2px solid $red;
+		color: $red;
+	}
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.quiz_list {
+	margin: 0;
+	padding: 0;
+	> li {
+		position: relative;
+		margin-bottom: 25px;
+		padding: 25px;
+		border: 3px solid $green;
+		border-radius: 25px;
+		background: $bg_yellow;
+		.quiz {
+			text-align: left;
+			.question,
+			.answers_list {
+				span {
+					display: block;
+					position: absolute;
+					top: -15px;
+					padding: 5px 20px;
+					border-radius: 25px;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+			.question,
+			.answers_list li {
+				position: relative;
+				border-radius: 20px;
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: -15px;
+					display: block;
+					width: 0;
+					height: 0;
+					border-radius: 50%;
+					transform: rotate(225deg);
+					border-right: 20px solid transparent;
+					border-bottom: 20px solid transparent;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 0;
+					height: 0;
+					border-radius: 50%;
+					transform: rotate(225deg);
+					bottom: -20px;
+					border-left: 20px solid $bg_yellow;
+					border-top: 20px solid $bg_yellow;
+					border-right: 20px solid transparent;
+					border-bottom: 20px solid transparent;
+				}
+			}
+			.question {
+				margin-bottom: 35px;
+				padding: 25px;
+				color: $white;
+				background-color: $green;
+				&::before {
+					left: 20px;
+					border-left: 20px solid $green;
+					border-top: 20px solid $green;
+				}
+				&::after {
+					left: 0;
+				}
+				span {
+					left: 15px;
+					color: $brown;
+					background: $gray;
+				}
+			}
+			.answers_list {
+				display: flex;
+				justify-content: end;
+				flex-wrap: wrap;
+				margin: 0 0 0 auto;
+				li {
+					width: 100%;
+					margin-bottom: 40px;
+					padding: 15px;
+					color: $brown;
+					background-color: $yellow;
+					@include min_pc {
+						width: 45%;
+						margin-left: 10px;
+						margin-bottom: 35px;
+					}
+					&::before {
+						right: 20px;
+						border-left: 20px solid $yellow;
+						border-top: 20px solid $yellow;
+					}
+					&::after {
+						right: 0;
+					}
+				}
+				span {
+					right: 10px;
+					color: $white;
+					background: $red;
+				}
+			}
+		}
+		.edit {
+			@include min_pc {
+				display: flex;
+				justify-content: end;
+			}
+			a {
+				width: 70%;
+				padding: 10px 0;
+				@include min_pc {
+					width: auto;
+					margin-right: 15px;
+					padding: 7.5px 30px;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
